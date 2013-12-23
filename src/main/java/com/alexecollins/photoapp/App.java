@@ -57,8 +57,8 @@ public class App {
             int y = (getHeight() - newH) / 2;
 
 
-            g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
-                    RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+            //g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION,
+             //       RenderingHints.VALUE_INTERPOLATION_BILINEAR);
             g2.drawImage(image, x, y, newW, newH, null);
         }
     }
