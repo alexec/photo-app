@@ -14,7 +14,7 @@ import java.util.*;
 /**
  * Hello world!
  */
-public class App {
+public class PhotoApp {
     private static class Tuple2<T1, T2> {
         final T1 _1;
         final T2 _2;
@@ -70,6 +70,11 @@ public class App {
     private static final JLabel marksLabel = new JLabel("");
 
     public static void main(String[] args) throws IOException {
+
+        if (args.length != 1 || args[0].equals("-h")) {
+            System.out.println("usage: java -jar photo-app-1.0.0-SNAPSHOT.jar directory");
+            System.exit(1);
+        }
 
         files = new File(args[0]).listFiles(new FilenameFilter() {
             @Override
